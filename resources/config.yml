@@ -1,0 +1,29 @@
+MENU:
+  TITLE: '&c&lAdmites el uso de hacks?'
+  SLOTS: 27
+  ITEMS:
+    SS:
+      SLOT: 12
+      ID: 1
+      DATA: 0
+      DISPLAYNAME: '&cPido SS'
+      LORE:
+        - '&a'
+    ADMIT:
+      SLOT: 14
+      ID: 1
+      DATA: 0
+      DISPLAYNAME: '&cAdmito uso de hacks / ventajas ilegales.'
+      LORE:
+        - '&a'
+REMINDER:
+  TIMER: 3
+  TIMER_ADMIT_LIMIT: 180 #In Seconds
+  SOUND:
+    ENABLED: true
+    SOUND: ANVIL_BREAK
+  CHAT:
+    ENABLED: true
+    MESSAGE: '&c¿Admites el uso de hacks?'
+SS_ADMIT: '&7[&c&lSS&7] &d%player% &eAdmite el uso de hacks.'
+SS_NO_ADMIT: '&7[&c&lSS&7] &d%player% &eSolicita una SS.'
