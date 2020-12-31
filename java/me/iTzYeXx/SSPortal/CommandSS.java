@@ -21,26 +21,24 @@ public class CommandSS implements CommandExecutor {
                 if(args.length >= 1){
                     Player target = Bukkit.getPlayer(args[0]);
                     if(target == null){
-                        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cEl usuario no esta conectado."));
+                        p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TARGET_NOT_FOUND").replaceAll("%player%", args[0])));
                     }else{
                         if(plugin.isFroozed(target)){
                             plugin.unFrooze(target);
                             target.closeInventory();
-                            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eEl jugador &d" + target.getName() + " &eha sido unfrozeado."));
+                            p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TARGET_UNFREEZE").replaceAll("%player%", args[0])));
                         }else{
                             plugin.frooze(target);
-                            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eEl jugador &d" + target.getName() + " &eha sido frozeado."));
+                            p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("TARGET_FREEZE").replaceAll("%player%", args[0])));
                         }
                     }
                 }else{
-                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cUso /ss <nick>"));
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("SS_USE")));
                 }
             }else{
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cNo tienes permisos para hacer esto."));
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NO_HAVE_PERMISSION")));
             }
-        }else{
-            Bukkit.getConsoleSender().sendMessage("No puedes congelar a un usuario con la consola.");
-        }
+        }else Bukkit.getConsoleSender().sendMessage("You cannot do this from the console.");
         return false;
     }
 

@@ -1,29 +1,35 @@
 MENU:
-  TITLE: '&c&lAdmites el uso de hacks?'
+  TITLE: '  &c&lDo you admit the use of hacks?'
   SLOTS: 27
   ITEMS:
     SS:
-      SLOT: 12
-      ID: 1
+      ID: 152
       DATA: 0
-      DISPLAYNAME: '&cPido SS'
+      SLOT: 11
+      DISPLAYNAME: '&c&lNO, SS PLS'
       LORE:
         - '&a'
     ADMIT:
-      SLOT: 14
-      ID: 1
+      ID: 133
       DATA: 0
-      DISPLAYNAME: '&cAdmito uso de hacks / ventajas ilegales.'
+      SLOT: 15
+      DISPLAYNAME: '&c&lI ADMIT THE USE OF HACKS.'
       LORE:
         - '&a'
 REMINDER:
-  TIMER: 3
-  TIMER_ADMIT_LIMIT: 180 #In Seconds
+  TIMER: 1
+  TIMER_ADMIT_LIMIT: 5 #In Seconds
   SOUND:
     ENABLED: true
-    SOUND: ANVIL_BREAK
+    SOUND: ITEM_BREAK
   CHAT:
     ENABLED: true
-    MESSAGE: '&c¿Admites el uso de hacks?'
-SS_ADMIT: '&7[&c&lSS&7] &d%player% &eAdmite el uso de hacks.'
-SS_NO_ADMIT: '&7[&c&lSS&7] &d%player% &eSolicita una SS.'
+    MESSAGE: '&c&lDo you admit the use of hacks? %seconds% remaining'
+SS_USE: '&cUse: /ss <player>'
+SS_ADMIT: '&7[&c&lSS&7] &d%player% &eadmitted the use of hacks.'
+SS_NO_ADMIT: '&7[&c&lSS&7] &d%player% &erequest an ss.'
+SS_TIMEOUT: '&7[&c&lSS&7] &d%player%''s &etime has expired to admit the use of hacks.'
+TARGET_NOT_FOUND: '&7[&c&lSS&7] &d%player% &enot found.'
+TARGET_FREEZE: '&7[&c&lSS&7] &eThe player &d%player% &ehas been frozen.'
+TARGET_UNFREEZE: '&7[&c&lSS&7] &eThe player &d%player% &ehas been unfrozen.'
+NO_HAVE_PERMISSION: '&cYou don''t have permission.'
