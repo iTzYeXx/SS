@@ -8,17 +8,17 @@ MENU:
       SLOT: 11
       DISPLAYNAME: '&c&lNO, SS PLS'
       LORE:
-        - '&a'
+        - '&7Exaple lore'
     ADMIT:
       ID: 133
       DATA: 0
       SLOT: 15
       DISPLAYNAME: '&c&lI ADMIT THE USE OF HACKS.'
       LORE:
-        - '&a'
+        - '&7Exaple lore'
 REMINDER:
   TIMER: 1
-  TIMER_ADMIT_LIMIT: 5 #In Seconds
+  TIMER_ADMIT_LIMIT: 90 #In Seconds
   SOUND:
     ENABLED: true
     SOUND: ITEM_BREAK
