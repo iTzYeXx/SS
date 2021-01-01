@@ -7,4 +7,4 @@ commands:
   ss:
     aliases: freeze
     description: Congela al jugador
-    permission: uso.ssportal
+    permission: ss.use
